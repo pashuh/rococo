@@ -1,0 +1,25 @@
+package io.student.rococo.config;
+
+public enum LocalConfig implements Config {
+    INSTANCE;
+
+    @Override
+    public String frontUrl() {
+        return "http://localhost:3000";
+    }
+
+    @Override
+    public String spendJdbcUrl() {
+        return "jdbc:mysql://localhost:3306/rococo-auth";
+    }
+
+    @Override
+    public String dbUserName() {
+        return "root";
+    }
+
+    @Override
+    public String dbPassword() {
+        return "secret";
+    }
+}
